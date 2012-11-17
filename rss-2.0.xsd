@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<xsd:element name="rss" type="rssType" />
+	<xsd:element name="rss" type="rss" />
 
-	<xsd:complexType name="rssType">
+	<xsd:complexType name="rss">
 		<xsd:sequence>
-			<xsd:element name="channel" type="channelType" maxOccurs="1"
+			<xsd:element name="channel" type="channel" maxOccurs="1"
 				minOccurs="1" />
 
 		</xsd:sequence>
-		<xsd:attribute name="version" type="versionType" />
+		<xsd:attribute name="version" type="version" />
 
 	</xsd:complexType>
 
-	<xsd:simpleType name="versionType">
+	<xsd:simpleType name="version">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="2.0" />
 		</xsd:restriction>
 	</xsd:simpleType>
 
-	<xsd:complexType name="channelType">
+	<xsd:complexType name="channel">
 		<xsd:sequence>
 			<xsd:element name="title" type="xsd:string" maxOccurs="1" minOccurs="1">
 				<xsd:annotation>
@@ -143,7 +143,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="cloud" type="cloudType" maxOccurs="1"
+			<xsd:element name="cloud" type="cloud" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -163,7 +163,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="image" type="imageType" maxOccurs="1"
+			<xsd:element name="image" type="image" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -180,7 +180,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="textInput" type="textInputType" maxOccurs="1"
+			<xsd:element name="textInput" type="textInput" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -189,7 +189,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="skipHours" type="skipHoursType" maxOccurs="1"
+			<xsd:element name="skipHours" type="skipHours" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -204,7 +204,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="skipDays" type="skipDaysType" maxOccurs="1"
+			<xsd:element name="skipDays" type="skipDays" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -219,12 +219,12 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="item" type="itemType" maxOccurs="unbounded"
+			<xsd:element name="item" type="item" maxOccurs="unbounded"
 				minOccurs="0" />
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="cloudType">
+	<xsd:complexType name="cloud">
 		<xsd:attribute name="domain" type="xsd:string" />
 		<xsd:attribute name="port">
 			<xsd:simpleType>
@@ -239,7 +239,7 @@
 		<xsd:attribute name="protocol" type="xsd:string" />
 	</xsd:complexType>
 
-	<xsd:complexType name="imageType">
+	<xsd:complexType name="image">
 		<xsd:sequence>
 			<xsd:element name="url" type="xsd:string" maxOccurs="1" minOccurs="1" />
 
@@ -268,7 +268,7 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="textInputType">
+	<xsd:complexType name="textInput">
 		<xsd:sequence>
 			<xsd:element name="title" type="xsd:string" maxOccurs="1" minOccurs="1" />
 			<xsd:element name="description" type="xsd:string" maxOccurs="1"
@@ -278,7 +278,7 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="skipHoursType">
+	<xsd:complexType name="skipHours">
 		<xsd:sequence>
 			<xsd:element name="hour" minOccurs="1" maxOccurs="24">
 				<xsd:simpleType>
@@ -291,7 +291,7 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="skipDaysType">
+	<xsd:complexType name="skipDays">
 		<xsd:sequence>
 			<xsd:element name="day" maxOccurs="7">
 				<xsd:simpleType>
@@ -309,7 +309,7 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="itemType">
+	<xsd:complexType name="item">
 		<xsd:sequence>
 			<xsd:element name="title" type="xsd:string" maxOccurs="1" minOccurs="0">
 				<xsd:annotation>
@@ -336,7 +336,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="category" type="categoryType" maxOccurs="unbounded"
+			<xsd:element name="category" type="category" maxOccurs="unbounded"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -352,7 +352,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="enclosure" type="enclosureType" maxOccurs="1"
+			<xsd:element name="enclosure" type="enclosure" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -361,7 +361,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="guid" type="guidType" maxOccurs="1"
+			<xsd:element name="guid" type="guid" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -377,7 +377,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="source" type="sourceType" maxOccurs="1"
+			<xsd:element name="source" type="source" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -388,11 +388,11 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:complexType name="categoryType">
+	<xsd:complexType name="category">
 		<xsd:attribute name="domain" type="xsd:string" />
 	</xsd:complexType>
 
-	<xsd:complexType name="enclosureType">
+	<xsd:complexType name="enclosure">
 		<xsd:attribute name="url" type="xsd:string" use="required" />
 		<xsd:attribute name="length" use="required">
 			<xsd:simpleType>
@@ -405,11 +405,11 @@
 	</xsd:complexType>
 
 
-	<xsd:complexType name="guidType">
+	<xsd:complexType name="guid">
 		<xsd:attribute name="isPermaLink" type="xsd:boolean" />
 	</xsd:complexType>
 
-	<xsd:complexType name="sourceType">
+	<xsd:complexType name="source">
 		<xsd:attribute name="url" type="xsd:string" use="required" />
 	</xsd:complexType>
 </xsd:schema>
