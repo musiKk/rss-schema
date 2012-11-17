@@ -1,4 +1,4 @@
-<xsd:?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<xsd:element name="rss" type="rssType" />
 
@@ -13,14 +13,14 @@
 	</xsd:complexType>
 
 	<xsd:simpleType name="versionType">
-		<xsd:restriction base="string">
+		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="2.0" />
 		</xsd:restriction>
 	</xsd:simpleType>
 
 	<xsd:complexType name="channelType">
 		<xsd:sequence>
-			<xsd:element name="title" type="string" maxOccurs="1" minOccurs="1">
+			<xsd:element name="title" type="xsd:string" maxOccurs="1" minOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>
 						The name of the channel. It's how people refer
@@ -31,7 +31,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="link" type="string" maxOccurs="1" minOccurs="1">
+			<xsd:element name="link" type="xsd:string" maxOccurs="1" minOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>
 						The URL to the HTML website corresponding to the
@@ -39,7 +39,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="description" type="string" maxOccurs="1"
+			<xsd:element name="description" type="xsd:string" maxOccurs="1"
 				minOccurs="1">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -47,7 +47,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="language" type="string" maxOccurs="1"
+			<xsd:element name="language" type="xsd:string" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -62,7 +62,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="copyright" type="string" maxOccurs="1"
+			<xsd:element name="copyright" type="xsd:string" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -70,7 +70,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="managingEditor" type="string" maxOccurs="1"
+			<xsd:element name="managingEditor" type="xsd:string" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -79,7 +79,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="webMaster" type="string" maxOccurs="1"
+			<xsd:element name="webMaster" type="xsd:string" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -88,7 +88,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="pubDate" type="dateTime" maxOccurs="1"
+			<xsd:element name="pubDate" type="xsd:dateTime" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -104,7 +104,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="lastBuildDate" type="dateTime" maxOccurs="1"
+			<xsd:element name="lastBuildDate" type="xsd:dateTime" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -113,7 +113,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="category" type="string" maxOccurs="1"
+			<xsd:element name="category" type="xsd:string" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -123,7 +123,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="generator" type="string" maxOccurs="1"
+			<xsd:element name="generator" type="xsd:string" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -132,7 +132,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="docs" type="string" maxOccurs="1" minOccurs="0">
+			<xsd:element name="docs" type="xsd:string" maxOccurs="1" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
 						A URL that points to the documentation for the
@@ -154,7 +154,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="ttl" type="int" maxOccurs="1" minOccurs="0">
+			<xsd:element name="ttl" type="xsd:int" maxOccurs="1" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
 						ttl stands for time to live. It's a number of
@@ -172,7 +172,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="rating" type="string" maxOccurs="1" minOccurs="0">
+			<xsd:element name="rating" type="xsd:string" maxOccurs="1" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
 						The PICS [http://www.w3.org/PICS/] rating for
@@ -225,31 +225,31 @@
 	</xsd:complexType>
 
 	<xsd:complexType name="cloudType">
-		<xsd:attribute name="domain" type="string" />
+		<xsd:attribute name="domain" type="xsd:string" />
 		<xsd:attribute name="port">
 			<xsd:simpleType>
-				<xsd:restriction base="int">
+				<xsd:restriction base="xsd:int">
 					<xsd:maxInclusive value="65536" />
 					<xsd:minInclusive value="0" />
 				</xsd:restriction>
 			</xsd:simpleType>
 		</xsd:attribute>
-		<xsd:attribute name="path" type="string" />
-		<xsd:attribute name="registerProcedure" type="string" />
-		<xsd:attribute name="protocol" type="string" />
+		<xsd:attribute name="path" type="xsd:string" />
+		<xsd:attribute name="registerProcedure" type="xsd:string" />
+		<xsd:attribute name="protocol" type="xsd:string" />
 	</xsd:complexType>
 
 	<xsd:complexType name="imageType">
 		<xsd:sequence>
-			<xsd:element name="url" type="string" maxOccurs="1" minOccurs="1" />
+			<xsd:element name="url" type="xsd:string" maxOccurs="1" minOccurs="1" />
 
-			<xsd:element name="title" type="string" maxOccurs="1" minOccurs="1" />
+			<xsd:element name="title" type="xsd:string" maxOccurs="1" minOccurs="1" />
 
-			<xsd:element name="link" type="string" maxOccurs="1" minOccurs="1" />
+			<xsd:element name="link" type="xsd:string" maxOccurs="1" minOccurs="1" />
 
 			<xsd:element name="width" default="88" maxOccurs="1" minOccurs="0">
 				<xsd:simpleType>
-					<xsd:restriction base="int">
+					<xsd:restriction base="xsd:int">
 						<xsd:minExclusive value="0" />
 						<xsd:maxInclusive value="144" />
 					</xsd:restriction>
@@ -257,24 +257,24 @@
 			</xsd:element>
 			<xsd:element name="height" default="31" maxOccurs="1" minOccurs="0">
 				<xsd:simpleType>
-					<xsd:restriction base="int">
+					<xsd:restriction base="xsd:int">
 						<xsd:minExclusive value="0" />
 						<xsd:maxInclusive value="400" />
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
-			<xsd:element name="description" type="string" maxOccurs="1"
+			<xsd:element name="description" type="xsd:string" maxOccurs="1"
 				minOccurs="0" />
 		</xsd:sequence>
 	</xsd:complexType>
 
 	<xsd:complexType name="textInputType">
 		<xsd:sequence>
-			<xsd:element name="title" type="string" maxOccurs="1" minOccurs="1" />
-			<xsd:element name="description" type="string" maxOccurs="1"
+			<xsd:element name="title" type="xsd:string" maxOccurs="1" minOccurs="1" />
+			<xsd:element name="description" type="xsd:string" maxOccurs="1"
 				minOccurs="1" />
-			<xsd:element name="name" type="string" maxOccurs="1" minOccurs="1" />
-			<xsd:element name="link" type="string" maxOccurs="1" minOccurs="1" />
+			<xsd:element name="name" type="xsd:string" maxOccurs="1" minOccurs="1" />
+			<xsd:element name="link" type="xsd:string" maxOccurs="1" minOccurs="1" />
 		</xsd:sequence>
 	</xsd:complexType>
 
@@ -282,7 +282,7 @@
 		<xsd:sequence>
 			<xsd:element name="hour" minOccurs="1" maxOccurs="24">
 				<xsd:simpleType>
-					<xsd:restriction base="int">
+					<xsd:restriction base="xsd:int">
 						<xsd:maxInclusive value="23" />
 						<xsd:minInclusive value="0" />
 					</xsd:restriction>
@@ -295,7 +295,7 @@
 		<xsd:sequence>
 			<xsd:element name="day" maxOccurs="7">
 				<xsd:simpleType>
-					<xsd:restriction base="string">
+					<xsd:restriction base="xsd:string">
 						<xsd:enumeration value="Monday" />
 						<xsd:enumeration value="Tuesday" />
 						<xsd:enumeration value="Wednesday" />
@@ -311,25 +311,25 @@
 
 	<xsd:complexType name="itemType">
 		<xsd:sequence>
-			<xsd:element name="title" type="string" maxOccurs="1" minOccurs="0">
+			<xsd:element name="title" type="xsd:string" maxOccurs="1" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
 						The title of the item.
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="link" type="string" maxOccurs="1" minOccurs="0">
+			<xsd:element name="link" type="xsd:string" maxOccurs="1" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>The URL of the item.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="description" type="string" maxOccurs="1"
+			<xsd:element name="description" type="xsd:string" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>The item synopsis.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="author" type="string" maxOccurs="1" minOccurs="0">
+			<xsd:element name="author" type="xsd:string" maxOccurs="1" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
 						Email address of the author of the item.
@@ -344,7 +344,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="comments" type="string" maxOccurs="1"
+			<xsd:element name="comments" type="xsd:string" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -369,7 +369,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="pubDate" type="dateTime" maxOccurs="1"
+			<xsd:element name="pubDate" type="xsd:dateTime" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -389,27 +389,27 @@
 	</xsd:complexType>
 
 	<xsd:complexType name="categoryType">
-		<xsd:attribute name="domain" type="string" />
+		<xsd:attribute name="domain" type="xsd:string" />
 	</xsd:complexType>
 
 	<xsd:complexType name="enclosureType">
-		<xsd:attribute name="url" type="string" use="required" />
+		<xsd:attribute name="url" type="xsd:string" use="required" />
 		<xsd:attribute name="length" use="required">
 			<xsd:simpleType>
-				<xsd:restriction base="int">
+				<xsd:restriction base="xsd:int">
 					<xsd:minExclusive value="0" />
 				</xsd:restriction>
 			</xsd:simpleType>
 		</xsd:attribute>
-		<xsd:attribute name="type" type="string" use="required" />
+		<xsd:attribute name="type" type="xsd:string" use="required" />
 	</xsd:complexType>
 
 
 	<xsd:complexType name="guidType">
-		<xsd:attribute name="isPermaLink" type="boolean" />
+		<xsd:attribute name="isPermaLink" type="xsd:boolean" />
 	</xsd:complexType>
 
 	<xsd:complexType name="sourceType">
-		<xsd:attribute name="url" type="string" use="required" />
+		<xsd:attribute name="url" type="xsd:string" use="required" />
 	</xsd:complexType>
 </xsd:schema>
