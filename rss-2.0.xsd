@@ -88,7 +88,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="pubDate" type="xsd:dateTime" maxOccurs="1"
+			<xsd:element name="pubDate" type="xsd:string" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -104,7 +104,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="lastBuildDate" type="xsd:dateTime" maxOccurs="1"
+			<xsd:element name="lastBuildDate" type="xsd:string" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
@@ -369,7 +369,7 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
-			<xsd:element name="pubDate" type="xsd:dateTime" maxOccurs="1"
+			<xsd:element name="pubDate" type="xsd:string" maxOccurs="1"
 				minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>
