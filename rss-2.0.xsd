@@ -389,7 +389,11 @@
 	</xsd:complexType>
 
 	<xsd:complexType name="category">
-		<xsd:attribute name="domain" type="xsd:string" />
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="domain" type="xsd:string" />
+			</xsd:extension>
+		</xsd:simpleContent>
 	</xsd:complexType>
 
 	<xsd:complexType name="enclosure">
@@ -406,10 +410,19 @@
 
 
 	<xsd:complexType name="guid">
-		<xsd:attribute name="isPermaLink" type="xsd:boolean" />
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="isPermaLink" type="xsd:boolean" />
+			</xsd:extension>
+		</xsd:simpleContent>
 	</xsd:complexType>
 
 	<xsd:complexType name="source">
-		<xsd:attribute name="url" type="xsd:string" use="required" />
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="url" type="xsd:string"
+					use="required" />
+			</xsd:extension>
+		</xsd:simpleContent>
 	</xsd:complexType>
 </xsd:schema>
