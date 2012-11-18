@@ -1,0 +1,16 @@
+<jxb:bindings version="2.0"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <jxb:bindings schemaLocation="../xsd/rss-2.0.xsd" node="/xs:schema">
+    <jxb:bindings node="//xs:complexType[@name='channel']">
+      <jxb:bindings node=".//xs:element[@name='category']">
+        <jxb:property name="categories"/>
+      </jxb:bindings>
+    </jxb:bindings>
+    <jxb:bindings node="//xs:complexType[@name='item']">
+      <jxb:bindings node=".//xs:element[@name='category']">
+        <jxb:property name="categories"/>
+      </jxb:bindings>
+    </jxb:bindings>
+  </jxb:bindings>
+</jxb:bindings>
